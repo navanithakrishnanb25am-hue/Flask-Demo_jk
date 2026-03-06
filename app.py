@@ -1,4 +1,4 @@
-from flask import Flask,render_template,request
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
@@ -17,7 +17,7 @@ def home():
 @app.route('/about', methods=['POST'])
 def about():
     if request.method == 'POST':
-        name=request.form.get('name')
+        name = request.form.get('name')
         return f'Hello, {name}! This is the About Page.'
 
 if __name__ == '__main__':
